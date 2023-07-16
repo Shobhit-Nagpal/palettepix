@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/palettepix/static/css/main.60f97bfe.css",
+    "main.js": "/palettepix/static/js/main.3faa12e2.js",
+    "static/media/cubes.jpg": "/palettepix/static/media/cubes.43b1c2300f695a3595b2.jpg",
+    "index.html": "/palettepix/index.html",
+    "main.60f97bfe.css.map": "/palettepix/static/css/main.60f97bfe.css.map",
+    "main.3faa12e2.js.map": "/palettepix/static/js/main.3faa12e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60f97bfe.css",
+    "static/js/main.3faa12e2.js"
+  ]
+}
