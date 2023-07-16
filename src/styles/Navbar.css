@@ -1,0 +1,90 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    padding: 2rem 6rem;
+}
+
+.navbar__logo {
+    margin-left: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar__logo p > a {
+    text-decoration: none;
+}
+
+.navbar__links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+.navbar__close {
+    color: #ffffff;
+}
+
+.navbar__menu {
+    display: none;
+    position: relative;
+}
+
+.navbar__menu > svg {
+    cursor: pointer;
+}
+
+.navbar__menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 2rem;
+    top: 40px;
+    right: 0;
+    position: absolute;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 10px;
+}
+
+.navbar__menu__container > p {
+    cursor: pointer;
+}
+
+.navbar__links p > a,.navbar__links p > a:visited,  .navbar__menu__container p > a, .navbar__menu__container p > a:visited {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1350px) {
+    .navbar {
+        padding: 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .navbar__links {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+}

@@ -1,0 +1,66 @@
+.form__container {
+    margin-top: 1rem;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    border: 3px solid #ffffff;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    background-color: #121212;
+    top: 50%;
+    left: 50%;
+    padding: 1.5rem;
+    width: 40rem;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+input {
+    height: 2.5rem;
+    margin: 0.7rem;
+    font-size: 1.5rem;
+}
+
+.form__container button {
+    margin: 1rem 0.5rem;
+}
+
+.form__container__changeBtn {
+    color: #ffffff;
+    background-color: #00C853;
+}
+
+.form__container__cancelBtn {
+    color: #ffffff;
+    border: 2px solid #D50000;
+    background-color: #121212;
+}
+
+.form__container__header {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .form__container {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .form__container {
+        width: 25rem;
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .form__container {
+        width: 18rem;
+    }
+
+    input {
+        width: 10rem;
+    }
+}

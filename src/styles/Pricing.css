@@ -1,0 +1,18 @@
+.pricing__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2rem 0rem 2rem;
+    padding: 1rem;
+}
+
+.pricing__header h1 {
+    font-size: 2.5rem;
+}
+
+.pricing__content p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+
