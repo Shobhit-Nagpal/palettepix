@@ -9,7 +9,8 @@
     top: 50%;
     left: 50%;
     padding: 1.5rem;
-    width: 40rem;
+    width: 35rem;
+    z-index: 2;
 }
 
 label {
@@ -45,6 +46,7 @@ input {
 @media screen and (max-width: 800px) {
     .form__container {
         width: 30rem;
+        transform: translate(-50%, -50%) scale(0.8);
     }
 }
 

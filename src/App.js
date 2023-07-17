@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ColorProvider } from "./context/ColorContext";
+import { useColor } from "./context/ColorContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Form from "./components/Form";
@@ -12,9 +12,9 @@ import Footer from "./components/Footer";
 function App() {
 
     const [toggleForm, setToggleForm] = useState(false);
+    const {primaryColor} = useColor();
   return (
-        <div className="App">
-             <ColorProvider>
+        <div className="App" style={ {backgroundColor: primaryColor} }>
 
                 {toggleForm ? <Form toggleForm={toggleForm} setToggleForm={setToggleForm} /> : (null)}
                 <Navbar />
@@ -22,7 +22,6 @@ function App() {
                 <Features />
                 <Pricing />
                 <Footer />
-             </ColorProvider>
         </div>
   );
 }
