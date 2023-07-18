@@ -39,4 +39,8 @@
     .current_palette {
         padding: 1rem 2rem;
     }
+
+.current_palette_info h3 {
+    font-size: 1.1rem;
+}
 }
