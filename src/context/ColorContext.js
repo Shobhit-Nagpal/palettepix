@@ -14,7 +14,7 @@ const ColorProvider = ( {children} ) => {
     const [textColor, setTextColor] = useState("#ffffff");
 
     return (
-        <ColorContext.Provider value={{primaryColor, secondaryColor, tertiaryColor, textColor, setPrimaryColor, setSecondaryColor, setTertiaryColor, setTextColor, changeColors}}>
+        <ColorContext.Provider value={{primaryColor, secondaryColor, tertiaryColor, textColor, setPrimaryColor, setSecondaryColor, setTertiaryColor, setTextColor}}>
             {children}
         </ColorContext.Provider>
     )
