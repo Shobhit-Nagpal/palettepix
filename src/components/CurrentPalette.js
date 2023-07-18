@@ -23,22 +23,22 @@ const CurrentPalette = () => {
             <div className="current_palette_info_container">
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Primary: {primaryColor}</h3>
-                    <ContentCopyIcon style={ {fill:textColor} } onClick={() => navigator.clipboard.writeText(primaryColor)} />
+                    <ContentCopyIcon style={ {fill:tertiaryColor} } onClick={() => navigator.clipboard.writeText(primaryColor)} />
                 </div>
 
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Secondary: {secondaryColor}</h3>
-                    <ContentCopyIcon style={ {fill: textColor} } onClick={() => navigator.clipboard.writeText(secondaryColor)} />
+                    <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => navigator.clipboard.writeText(secondaryColor)} />
                 </div>
 
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Tertiary: {tertiaryColor}</h3>
-                    <ContentCopyIcon style={ {fill: textColor} } onClick={() => navigator.clipboard.writeText(tertiaryColor)} />
+                    <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => navigator.clipboard.writeText(tertiaryColor)} />
                 </div>
 
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Text: {textColor}</h3>
-                    <ContentCopyIcon style={ {fill: textColor} } onClick={() => navigator.clipboard.writeText(textColor)} />
+                    <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => navigator.clipboard.writeText(textColor)} />
                 </div>
             </div>
 
