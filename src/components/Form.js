@@ -35,7 +35,7 @@ const Form = (props) => {
 
             <label htmlFor="text_color">Text color</label> <br />
             <input type="text" id="text_color" name="Text color" value={textColor} onChange={e => setTextColor(e.target.value)}></input>
-            <input type="color" id="tertiary_color_picker" value={textColor} onChange={e => setTextColor(e.target.value)}></input>
+            <input type="color" id="text_color_picker" value={textColor} onChange={e => setTextColor(e.target.value)}></input>
 
             <br />
             <br />
