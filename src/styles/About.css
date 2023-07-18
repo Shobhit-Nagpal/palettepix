@@ -1,9 +1,13 @@
-.pricing {
+.about {
     padding: 2rem 6rem;
     margin: 1rem;
 }
 
-.pricing__content {
+.about__header h1 {
+    font-size: 2.5rem;
+}
+
+.about__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,17 +15,7 @@
     padding: 1rem;
 }
 
-.pricing__header h1 {
-    font-size: 2.5rem;
-}
-
-.pricing__content p {
+.about__content p {
     font-size: 1.5rem;
     margin: 0 auto;
-}
-
-@media screen and (max-width: 500px) {
-    .pricing {
-        padding: 1rem 2rem;
-    }
 }

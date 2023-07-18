@@ -8,6 +8,8 @@ import "./styles/App.css";
 import "./styles/index.css";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import CurrentPalette from "./components/CurrentPalette";
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
                 {toggleForm ? <Form toggleForm={toggleForm} setToggleForm={setToggleForm} /> : (null)}
                 <Navbar />
                 <Hero setToggleForm={setToggleForm} />
+                <CurrentPalette />
+                <About /> 
                 <Features />
                 <Pricing />
                 <Footer />

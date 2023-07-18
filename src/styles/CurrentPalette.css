@@ -1,0 +1,16 @@
+.current_palette {
+    padding: 2rem 6rem;
+    margin: 1rem; 
+}
+
+.current_palette_colors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 2rem;
+}
+
+.current_palette_header h1 {
+    font-size: 2.5rem;
+}
