@@ -24,10 +24,16 @@
     font-size: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 710px) {
     .footer {
-        padding: 2rem 1rem;
+        padding: 1rem 2rem;
     }
+
+    .footer_info, .footer_links {
+        margin: 1rem 0;
+    }
+
+
 }
 
 @media screen and (max-width: 500px) {
