@@ -32,12 +32,6 @@ input {
     background-color: #00C853;
 }
 
-.form__container__cancelBtn {
-    color: #ffffff;
-    border: 2px solid #D50000;
-    background-color: #121212;
-}
-
 .form__container__header {
     font-size: 3rem;
     margin: 1rem;
