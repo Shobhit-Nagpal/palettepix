@@ -39,24 +39,29 @@ input {
 
 @media screen and (max-width: 800px) {
     .form__container {
-        width: 30rem;
+        width: 35rem;
         transform: translate(-50%, -50%) scale(0.8);
     }
 }
 
 @media screen and (max-width: 550px) {
     .form__container {
-        width: 25rem;
-        min-width: 320px;
+        width: 30rem;
+        transform: translate(-50%, -50%) scale(0.8);
     }
 }
 
 @media screen and (max-width: 450px) {
     .form__container {
-        width: 18rem;
+        width: 30rem;
+        transform: translate(-50%, -50%) scale(0.7);
     }
 
     input {
-        width: 10rem;
+        width: 14rem;
+    }
+
+    input[type=color] {
+        width: 3rem;
     }
 }
