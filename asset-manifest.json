@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/palettepix/static/css/main.eedb45ba.css",
-    "main.js": "/palettepix/static/js/main.190ea590.js",
+    "main.js": "/palettepix/static/js/main.5e495781.js",
     "static/media/cubes.jpg": "/palettepix/static/media/cubes.43b1c2300f695a3595b2.jpg",
     "index.html": "/palettepix/index.html",
     "main.eedb45ba.css.map": "/palettepix/static/css/main.eedb45ba.css.map",
-    "main.190ea590.js.map": "/palettepix/static/js/main.190ea590.js.map"
+    "main.5e495781.js.map": "/palettepix/static/js/main.5e495781.js.map"
   },
   "entrypoints": [
     "static/css/main.eedb45ba.css",
-    "static/js/main.190ea590.js"
+    "static/js/main.5e495781.js"
   ]
 }
