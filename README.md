@@ -1,3 +1,8 @@
+# About
+Image credits: https://unsplash.com/@sebastiansvenson
+
+PalettePix is where designers and developers can quickly test out color palettes to get an idea of how their websites would look.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
