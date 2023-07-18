@@ -18,10 +18,10 @@ const Menu = () => {
 const Navbar = () => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
-  const {primaryColor, tertiaryColor, textColor} = useColor();
+  const {primaryColor, secondaryColor, textColor} = useColor();
 	
   return (
-    <div className="navbar" style={ {backgroundColor: tertiaryColor} }>
+    <div className="navbar" style={ {backgroundColor: secondaryColor} }>
 	  <div className="navbar__logo">
 	  	<p  style={ {color: textColor} }>[pal.pix]</p>
 	  </div>

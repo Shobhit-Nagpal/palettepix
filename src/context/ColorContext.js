@@ -9,8 +9,8 @@ const useColor = () => {
 const ColorProvider = ( {children} ) => {
  
     const [primaryColor, setPrimaryColor] = useState("#121212");
-    const [secondaryColor, setSecondaryColor] = useState("#1A8B19");
-    const [tertiaryColor, setTertiaryColor] = useState("#8B19D1");
+    const [secondaryColor, setSecondaryColor] = useState("#8B19D1");
+    const [tertiaryColor, setTertiaryColor] = useState("#1A8B19");
     const [textColor, setTextColor] = useState("#FFFFFF");
 
     return (
