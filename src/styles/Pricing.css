@@ -19,4 +19,8 @@
     margin: 0 auto;
 }
 
-
+@media screen and (max-width: 500px) {
+    .pricing {
+        padding: 1rem 2rem;
+    }
+}
