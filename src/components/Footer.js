@@ -1,10 +1,11 @@
 import React from "react";
 import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { useColor } from "../context/ColorContext";
 import "../styles/Footer.css";
 
 const Footer = () => {
-    const {primaryColor, secondaryColor, textColor} = useColor();
+    const {primaryColor, tertiaryColor, textColor} = useColor();
     return (
         <div className="footer" style={ {backgroundColor: primaryColor} }>
             <div className="footer_info">
@@ -13,9 +14,9 @@ const Footer = () => {
             </div>
 
             <div className="footer_links">
-                <a href="https://github.com/Shobhit-Nagpal" target="_blank" rel="noreferrer"><FaGithub className="footer_links_icon" style={ {color: secondaryColor} } /></a>
-                <a href="https://www.linkedin.com/in/shobhitnagpal/" target="_blank" rel="noreferrer"><FaLinkedin className="footer_links_icon" style={ {color: secondaryColor} } /></a>
-                <a href="https://www.twitter.com/shbhtngpl" target="_blank" rel="noreferrer"><FaTwitter className="footer_links_icon" style={ {color: secondaryColor} } /></a>
+                <a href="https://github.com/Shobhit-Nagpal" target="_blank" rel="noreferrer"><FaGithub className="footer_links_icon" style={ {color: tertiaryColor} } /></a>
+                <a href="https://www.linkedin.com/in/shobhitnagpal/" target="_blank" rel="noreferrer"><FaLinkedin className="footer_links_icon" style={ {color: tertiaryColor} } /></a>
+                <a href="https://www.twitter.com/shbhtngpl" target="_blank" rel="noreferrer"><FaTwitter className="footer_links_icon" style={ {color: tertiaryColor} } /></a>
             </div>
         </div>
     )
