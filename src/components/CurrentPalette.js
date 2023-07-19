@@ -2,10 +2,19 @@ import React from "react";
 import { useColor } from "../context/ColorContext";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import "../styles/CurrentPalette.css";
+import { getRandomPalette } from "../utils/colorPalettes";
 
 const CurrentPalette = () => {
 
-    const {primaryColor, secondaryColor, tertiaryColor, textColor} = useColor();
+    const {primaryColor, secondaryColor, tertiaryColor, textColor, setPrimaryColor, setSecondaryColor, setTertiaryColor, setTextColor} = useColor();
+
+    const handleClick = () => {
+        const palette = getRandomPalette();
+        setPrimaryColor(palette.primaryColor);
+        setSecondaryColor(palette.secondaryColor);
+        setTertiaryColor(palette.tertiaryColor);
+        setTextColor(palette.textColor);
+    }
     return (
         <div className="current_palette" style={ {backgroundColor: primaryColor} }>
 
@@ -42,6 +51,9 @@ const CurrentPalette = () => {
                 </div>
             </div>
 
+            <div className="randomize_palette_btn">
+                <button style = { {backgroundColor: secondaryColor, color: textColor} } onClick={() => handleClick()}>Randomize palette</button>
+            </div>
 
         </div>
     );
