@@ -62,6 +62,10 @@
         text-align: center;
     }
 
+    .hero__img {
+        padding: 0;
+    }
+
     .hero__img img{
         height: auto;
         max-width: 90%;
