@@ -21,3 +21,9 @@ button {
     margin: 1rem 0;
     cursor: pointer;
 }
+
+@media screen and (max-width: 570px) {
+    button {
+        font-size: 1.25rem;
+    }
+}
