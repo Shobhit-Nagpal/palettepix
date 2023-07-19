@@ -28,7 +28,7 @@ const Navbar = (props) => {
 	  	{toggleMenu ? <CloseIcon style={{fill: textColor}} fontSize="large" onClick={() => setToggleMenu(false)} /> : <MenuIcon style={{fill: textColor}} fontSize="large" onClick={() => setToggleMenu(true)		                                                                                                             }/>}
 
                 {toggleMenu && (
-                    <div className="navbar__menu__container"  style={ {backgroundColor: primaryColor} }>
+                    <div className="navbar__menu__container"  style={ {backgroundColor: primaryColor, borderColor: secondaryColor, borderWidth: '0.2rem', borderStyle: 'solid'} }>
                         <p style={ {color: textColor} } onClick={() => handleHomeClick()}>Home</p>
                         <p style={ {color: textColor} } onClick={() => handleAboutClick()}>About</p>
 	                    <p style={ {color: textColor} } onClick={() => handleFeaturesClick()}>Features</p>

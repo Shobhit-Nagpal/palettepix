@@ -50,6 +50,7 @@
 
 .navbar__menu__container > p {
     cursor: pointer;
+    margin: 0.5rem 0;
 }
 
 .navbar__links p > a,.navbar__links p > a:visited,  .navbar__menu__container p > a, .navbar__menu__container p > a:visited {
