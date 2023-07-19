@@ -1,15 +1,15 @@
-import React, {useState} from "react";
+import React, {forwardRef, useState} from "react";
 import CubesImg from "../assets/cubes.jpg";
 import { useColor } from "../context/ColorContext";
 import "../styles/Hero.css";
 
-const Hero =  (props) => {
+const Hero =  (props,ref) => {
 
     const {setToggleForm} = props;
     const {primaryColor, secondaryColor, textColor} = useColor();
 
     return (
-         <div className="hero" style={ {backgroundColor: primaryColor} }>
+         <div className="hero" style={ {backgroundColor: primaryColor} } ref={ref}>
 
             <div className="hero__content">
                 <h1 style={ {color: textColor} }>Discover. Create. Experiment.</h1>
@@ -25,4 +25,4 @@ const Hero =  (props) => {
   )
 }
 
-export default Hero;
+export default forwardRef(Hero);

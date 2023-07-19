@@ -1,18 +1,18 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import ExploreIcon from '@mui/icons-material/Explore';
 import Polyline from '@mui/icons-material/Polyline';
 import SpeedIcon from '@mui/icons-material/Speed';
 import "../styles/Features.css";
 import { useColor } from "../context/ColorContext";
 
-const Features = () => {
+const Features = (props, ref) => {
 
     const {primaryColor, secondaryColor, textColor} = useColor();
     return (
-        <div className="features" style={ {backgroundColor: primaryColor} } >
+        <div className="features" style={ {backgroundColor: primaryColor} } ref={ref}>
 
             <div className="features__header">
-                <h1 style={ {color: textColor} }>Features</h1>
+               <h1 style={ {color: textColor} }>Features</h1>
             </div>
 
             <div className="features__content">
@@ -35,4 +35,4 @@ const Features = () => {
     )
 }
 
-export default Features;
+export default forwardRef(Features);

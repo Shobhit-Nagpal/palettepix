@@ -12,10 +12,6 @@
     cursor: pointer;
 }
 
-.navbar__logo p > a {
-    text-decoration: none;
-}
-
 .navbar__links {
     display: flex;
     gap: 2rem;

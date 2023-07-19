@@ -7,7 +7,7 @@ const Pricing = () => {
     return (
         <div className="pricing" style={ {backgroundColor: primaryColor} }>
             <div className="pricing__header">
-                <h1 style={ {color: textColor} }>Pricing</h1>
+                <h1 style={ {color: textColor} } id="pricing">Pricing</h1>
             </div>
 
             <div className="pricing__content">

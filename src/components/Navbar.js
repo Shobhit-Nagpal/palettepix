@@ -1,33 +1,27 @@
-import React, {useState} from "react";
+import React, { useState, useRef} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import '../styles/Navbar.css';
 import { useColor } from "../context/ColorContext";
 
-const Menu = () => {
 
-  const {textColor} = useColor();
-  return(
-    <>
-	  <p style={ {color: textColor} }>Home</p>
-	  <p style={ {color: textColor} }>Features</p>
-	  <p style={ {color: textColor} }>Pricing</p>
-    </>
-  )
-}
-const Navbar = () => {
+const Navbar = (props) => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
   const {primaryColor, secondaryColor, textColor} = useColor();
-	
+
+  const {handleFeaturesClick, handleAboutClick, handleHomeClick} = props;
+  
   return (
     <div className="navbar" style={ {backgroundColor: secondaryColor} }>
 	  <div className="navbar__logo">
-	  	<p  style={ {color: textColor} }>[pal.pix]</p>
+	  	<p  style={ {color: textColor} } onClick={ () => {handleHomeClick()} }>[pal.pix]</p>
 	  </div>
 
 	  <div className="navbar__links">
-	  	<Menu />
+        <p style={ {color: textColor} } onClick={() => handleHomeClick()}>Home</p>
+        <p style={ {color: textColor} } onClick={() => handleAboutClick()}>About</p>
+	    <p style={ {color: textColor} } onClick={() => handleFeaturesClick()}>Features</p>
 	  </div>
 
 	  <div className="navbar__menu">
@@ -35,7 +29,10 @@ const Navbar = () => {
 
                 {toggleMenu && (
                     <div className="navbar__menu__container"  style={ {backgroundColor: primaryColor} }>
-                        <Menu />
+                        <p style={ {color: textColor} } onClick={() => handleHomeClick()}>Home</p>
+                        <p style={ {color: textColor} } onClick={() => handleAboutClick()}>About</p>
+	                    <p style={ {color: textColor} } onClick={() => handleFeaturesClick()}>Features</p>
+
                     </div>
                 )}
 	  </div>

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useColor } from "../context/ColorContext";
 import "../styles/About.css";
 
-const About = () => {
+const About = (props, ref) => {
 
     const {primaryColor, textColor} = useColor();
     return (
-        <div className="about" style={ {backgroundColor: primaryColor} }>
+        <div className="about" style={ {backgroundColor: primaryColor} } ref={ref}>
             <div className="about__header">
                 <h1 style={ {color: textColor} }>About</h1>
             </div>
@@ -22,4 +22,4 @@ const About = () => {
     );
 }
 
-export default About;
+export default forwardRef(About);
