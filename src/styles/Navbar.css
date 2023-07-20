@@ -7,7 +7,7 @@
 }
 
 .navbar__logo {
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -15,7 +15,7 @@
 .navbar__links {
     display: flex;
     gap: 2rem;
-    margin-right: 3rem;
+    margin-right: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
 }
@@ -28,6 +28,7 @@
 .navbar__menu {
     display: none;
     position: relative;
+    margin-right: 1rem;
 }
 
 .navbar__menu > svg {
