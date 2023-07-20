@@ -12,7 +12,7 @@ const Hero =  (props,ref) => {
          <div className="hero" style={ {backgroundColor: primaryColor} } ref={ref}>
 
             <div className="hero__content">
-                <h1 style={ {color: textColor} }>Discover. Create. Experiment.</h1>
+                <h1 style={ {color: textColor} }>Discover. Visualize. Experiment.</h1>
                 <button style={ {backgroundColor: secondaryColor, color: textColor} } onClick={() => setToggleForm(true)}>Change palette</button>
             </div>
 
