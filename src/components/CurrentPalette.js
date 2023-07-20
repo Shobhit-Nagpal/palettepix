@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useColor } from "../context/ColorContext";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import "../styles/CurrentPalette.css";
 import { getRandomPalette } from "../utils/colorPalettes";
 
 const CurrentPalette = () => {
 
     const {primaryColor, secondaryColor, tertiaryColor, textColor, setPrimaryColor, setSecondaryColor, setTertiaryColor, setTextColor} = useColor();
+
+    const [colorCopied, setColorCopied] = useState("");
+
+    const handleCopyClick = (color) => {
+        navigator.clipboard.writeText(color);
+        setColorCopied(color);
+    }
 
     const handleClick = () => {
         const palette = getRandomPalette();
@@ -15,6 +23,17 @@ const CurrentPalette = () => {
         setTertiaryColor(palette.tertiaryColor);
         setTextColor(palette.textColor);
     }
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setColorCopied("")
+        }, 1500);
+
+        return () => {
+            clearTimeout(timeoutId);
+        }
+    }, [colorCopied]);
+
     return (
         <div className="current_palette" style={ {backgroundColor: primaryColor} }>
 
@@ -32,22 +51,22 @@ const CurrentPalette = () => {
             <div className="current_palette_info_container">
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Primary: {primaryColor}</h3>
-                    <ContentCopyIcon style={ {fill:tertiaryColor} } onClick={() => navigator.clipboard.writeText(primaryColor)} />
+                    {colorCopied === primaryColor ? <CheckCircleIcon style={ {fill: tertiaryColor} } /> : <ContentCopyIcon style={ {fill:tertiaryColor} } onClick={() => handleCopyClick(primaryColor)} />}
                 </div>
 
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Secondary: {secondaryColor}</h3>
-                    <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => navigator.clipboard.writeText(secondaryColor)} />
+                    {colorCopied === secondaryColor ? <CheckCircleIcon style={ {fill: tertiaryColor} } />: <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => handleCopyClick(secondaryColor)} />}
                 </div>
 
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Tertiary: {tertiaryColor}</h3>
-                    <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => navigator.clipboard.writeText(tertiaryColor)} />
+                    {colorCopied === tertiaryColor ? <CheckCircleIcon style={ {fill: tertiaryColor} } /> : <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => handleCopyClick(tertiaryColor)} />}
                 </div>
 
                 <div className="current_palette_info">
                     <h3 style={ {color: textColor} }>Text: {textColor}</h3>
-                    <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => navigator.clipboard.writeText(textColor)} />
+                    {colorCopied === textColor ? <CheckCircleIcon style={ {fill: tertiaryColor} } /> : <ContentCopyIcon style={ {fill: tertiaryColor} } onClick={() => handleCopyClick(textColor)} />}
                 </div>
             </div>
 
