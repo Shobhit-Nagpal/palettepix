@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 710px) {
     .footer {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
     }
 
     .footer_info, .footer_links {
