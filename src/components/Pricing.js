@@ -3,15 +3,15 @@ import { useColor } from "../context/ColorContext";
 import "../styles/Pricing.css";
 
 const Pricing = () => {
-    const {primaryColor, textColor} = useColor();
+    const { palette } = useColor();
     return (
-        <div className="pricing" style={ {backgroundColor: primaryColor} }>
+        <div className="pricing" style={ {backgroundColor: palette.primaryColor} }>
             <div className="pricing__header">
-                <h1 style={ {color: textColor} } id="pricing">Pricing</h1>
+                <h1 style={ {color: palette.textColor} } id="pricing">Pricing</h1>
             </div>
 
             <div className="pricing__content">
-                <p style={ {color: textColor} }>This is free to use.</p>
+                <p style={ {color: palette.textColor} }>This is free to use.</p>
             </div>
         </div>
     )

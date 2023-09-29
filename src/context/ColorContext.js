@@ -8,13 +8,15 @@ const useColor = () => {
 
 const ColorProvider = ( {children} ) => {
  
-    const [primaryColor, setPrimaryColor] = useState("#121212");
-    const [secondaryColor, setSecondaryColor] = useState("#8B19D1");
-    const [tertiaryColor, setTertiaryColor] = useState("#4123d7");
-    const [textColor, setTextColor] = useState("#FFFFFF");
+    const [palette, setPalette] = useState({
+                                    primaryColor: "#121212",
+                                    secondaryColor: "#8B19D1",
+                                    tertiaryColor: "#4123D7",
+                                    textColor: "#FFFFFF"
+                                        });
 
     return (
-        <ColorContext.Provider value={{primaryColor, secondaryColor, tertiaryColor, textColor, setPrimaryColor, setSecondaryColor, setTertiaryColor, setTextColor}}>
+        <ColorContext.Provider value={{ palette, setPalette }}>
             {children}
         </ColorContext.Provider>
     )

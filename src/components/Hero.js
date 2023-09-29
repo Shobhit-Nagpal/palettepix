@@ -6,14 +6,14 @@ import "../styles/Hero.css";
 const Hero =  (props,ref) => {
 
     const {setToggleForm} = props;
-    const {primaryColor, secondaryColor, textColor} = useColor();
+    const { palette } = useColor();
 
     return (
-         <div className="hero" style={ {backgroundColor: primaryColor} } ref={ref}>
+         <div className="hero" style={ {backgroundColor: palette.primaryColor} } ref={ref}>
 
             <div className="hero__content">
-                <h1 style={ {color: textColor} }>Discover. Visualize. Experiment.</h1>
-                <button style={ {backgroundColor: secondaryColor, color: textColor} } onClick={() => setToggleForm(true)}>Change palette</button>
+                <h1 style={ {color: palette.textColor} }>Discover. Visualize. Experiment.</h1>
+                <button style={ {backgroundColor: palette.secondaryColor, color: palette.textColor} } onClick={() => setToggleForm(true)}>Change palette</button>
             </div>
 
 

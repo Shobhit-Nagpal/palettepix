@@ -8,30 +8,30 @@ import { useColor } from "../context/ColorContext";
 const Navbar = (props) => {
 
   const [toggleMenu, setToggleMenu] = useState(false);
-  const {primaryColor, secondaryColor, textColor} = useColor();
+  const { palette } = useColor();
 
   const {handleFeaturesClick, handleAboutClick, handleHomeClick} = props;
   
   return (
-    <div className="navbar" style={ {backgroundColor: secondaryColor} }>
+    <div className="navbar" style={ {backgroundColor: palette.secondaryColor} }>
 	  <div className="navbar__logo">
-	  	<p  style={ {color: textColor} } onClick={ () => {handleHomeClick()} }>[pal.pix]</p>
+	  	<p  style={ {color: palette.textColor} } onClick={ () => {handleHomeClick()} }>[pal.pix]</p>
 	  </div>
 
 	  <div className="navbar__links">
-        <p style={ {color: textColor} } onClick={() => handleHomeClick()}>Home</p>
-        <p style={ {color: textColor} } onClick={() => handleAboutClick()}>About</p>
-	    <p style={ {color: textColor} } onClick={() => handleFeaturesClick()}>Features</p>
+        <p style={ {color: palette.textColor} } onClick={() => handleHomeClick()}>Home</p>
+        <p style={ {color: palette.textColor} } onClick={() => handleAboutClick()}>About</p>
+	    <p style={ {color: palette.textColor} } onClick={() => handleFeaturesClick()}>Features</p>
 	  </div>
 
 	  <div className="navbar__menu">
-	  	{toggleMenu ? <CloseIcon style={{fill: textColor}} fontSize="large" onClick={() => setToggleMenu(false)} /> : <MenuIcon style={{fill: textColor}} fontSize="large" onClick={() => setToggleMenu(true)		                                                                                                             }/>}
+	  	{toggleMenu ? <CloseIcon style={{fill: palette.textColor}} fontSize="large" onClick={() => setToggleMenu(false)} /> : <MenuIcon style={{fill: palette.textColor}} fontSize="large" onClick={() => setToggleMenu(true)		                                                                                                             }/>}
 
                 {toggleMenu && (
-                    <div className="navbar__menu__container"  style={ {backgroundColor: primaryColor, borderColor: secondaryColor, borderWidth: '0.2rem', borderStyle: 'solid'} }>
-                        <p style={ {color: textColor} } onClick={() => handleHomeClick()}>Home</p>
-                        <p style={ {color: textColor} } onClick={() => handleAboutClick()}>About</p>
-	                    <p style={ {color: textColor} } onClick={() => handleFeaturesClick()}>Features</p>
+                    <div className="navbar__menu__container"  style={ {backgroundColor: palette.primaryColor, borderColor: palette.secondaryColor, borderWidth: '0.2rem', borderStyle: 'solid'} }>
+                        <p style={ {color: palette.textColor} } onClick={() => handleHomeClick()}>Home</p>
+                        <p style={ {color: palette.textColor} } onClick={() => handleAboutClick()}>About</p>
+	                    <p style={ {color: palette.textColor} } onClick={() => handleFeaturesClick()}>Features</p>
 
                     </div>
                 )}
