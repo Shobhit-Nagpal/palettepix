@@ -1,4 +1,4 @@
-import React, {forwardRef, useState} from "react";
+import React, { forwardRef } from "react";
 import CubesImg from "../assets/cubes.jpg";
 import { useColor } from "../context/ColorContext";
 import "../styles/Hero.css";
@@ -8,7 +8,7 @@ const Hero =  (props,ref) => {
     const {setToggleForm} = props;
     const { palette } = useColor();
 
-    return (
+   return (
          <div className="hero" style={ {backgroundColor: palette.primaryColor} } ref={ref}>
 
             <div className="hero__content">

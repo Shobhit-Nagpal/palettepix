@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useColor } from "../context/ColorContext";
-import { Sketch, Chrome } from "@uiw/react-color";
+import { Chrome } from "@uiw/react-color";
 import ColorizeIcon from '@mui/icons-material/Colorize';
 import CloseIcon from '@mui/icons-material/Close';
 import "../styles/Form.css";

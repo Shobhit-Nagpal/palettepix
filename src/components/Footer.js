@@ -1,6 +1,5 @@
 import React from "react";
 import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { useColor } from "../context/ColorContext";
 import "../styles/Footer.css";
 
