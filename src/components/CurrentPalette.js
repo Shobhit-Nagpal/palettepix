@@ -3,6 +3,7 @@ import { useColor } from "../context/ColorContext";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import "../styles/CurrentPalette.css";
+import "../styles/index.css";
 import { getRandomPalette } from "../utils/colorPalettes";
 
 const CurrentPalette = () => {
@@ -43,7 +44,7 @@ const CurrentPalette = () => {
     }, [colorCopied]);
 
     return (
-        <div className="current_palette" style={ {backgroundColor: palette.primaryColor} }>
+        <div className="current_palette color-transition" style={ {backgroundColor: palette.primaryColor} }>
 
             <div className="current_palette_header">
                 <h1 style={ {color: palette.textColor} }>Current palette</h1>

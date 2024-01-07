@@ -2,11 +2,12 @@ import React from "react";
 import {FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 import { useColor } from "../context/ColorContext";
 import "../styles/Footer.css";
+import "../styles/index.css";
 
 const Footer = () => {
     const { palette } = useColor();
     return (
-        <div className="footer" style={ {backgroundColor: palette.primaryColor} }>
+        <div className="footer color-transition" style={ {backgroundColor: palette.primaryColor} }>
             <div className="footer_info">
                 <p style={ {color: palette.textColor} }>Made by Shobhit Nagpal</p>
                 <p style={ {color: palette.textColor} }>Copyright &#169; 2023</p>

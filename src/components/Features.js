@@ -3,13 +3,14 @@ import ExploreIcon from '@mui/icons-material/Explore';
 import Polyline from '@mui/icons-material/Polyline';
 import SpeedIcon from '@mui/icons-material/Speed';
 import "../styles/Features.css";
+import "../styles/index.css";
 import { useColor } from "../context/ColorContext";
 
 const Features = (props, ref) => {
 
     const { palette } = useColor();
     return (
-        <div className="features" style={ {backgroundColor: palette.primaryColor} } ref={ref}>
+        <div className="features color-transition" style={ {backgroundColor: palette.primaryColor} } ref={ref}>
 
             <div className="features__header">
                <h1 style={ {color: palette.textColor} }>Features</h1>

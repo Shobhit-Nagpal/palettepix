@@ -14,7 +14,7 @@ import CurrentPalette from "./components/CurrentPalette";
 function App() {
 
     const [toggleForm, setToggleForm] = useState(false);
-    const {primaryColor, palette} = useColor();
+    const {palette} = useColor();
 
     const featuresRef = useRef(null);
     const aboutRef = useRef(null);
@@ -33,7 +33,7 @@ function App() {
     }
 
   return (
-        <div className="App" style={ {backgroundColor: palette.primaryColor} }>
+        <div className="App color-transition" style={ {backgroundColor: palette.primaryColor} }>
 
                 {toggleForm ? <Form toggleForm={toggleForm} setToggleForm={setToggleForm} /> : (null)}
                 <Navbar handleFeaturesClick={handleFeaturesClick} handleAboutClick={handleAboutClick} handleHomeClick={handleHomeClick} />

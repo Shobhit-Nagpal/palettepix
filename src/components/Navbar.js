@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import '../styles/Navbar.css';
+import "../styles/index.css";
 import { useColor } from "../context/ColorContext";
 
 
@@ -13,7 +14,7 @@ const Navbar = (props) => {
   const {handleFeaturesClick, handleAboutClick, handleHomeClick} = props;
   
   return (
-    <div className="navbar" style={ {backgroundColor: palette.secondaryColor} }>
+    <div className="navbar color-transition" style={ {backgroundColor: palette.secondaryColor} }>
 	  <div className="navbar__logo">
 	  	<p  style={ {color: palette.textColor} } onClick={ () => {handleHomeClick()} }>[pal.pix]</p>
 	  </div>

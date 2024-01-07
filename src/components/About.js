@@ -1,12 +1,13 @@
 import React, { forwardRef } from "react";
 import { useColor } from "../context/ColorContext";
 import "../styles/About.css";
+import "../styles/index.css";
 
 const About = (props, ref) => {
 
     const { palette } = useColor();
     return (
-        <div className="about" style={ {backgroundColor: palette.primaryColor} } ref={ref}>
+        <div className="about color-transition" style={ {backgroundColor: palette.primaryColor} } ref={ref}>
             <div className="about__header">
                 <h1 style={ {color: palette.textColor} }>About</h1>
             </div>
